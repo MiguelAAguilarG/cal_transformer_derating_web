@@ -1,0 +1,82 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    max-width: 20em;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+header{
+    margin: 0 auto;
+    font-size: x-large;
+    text-align: center;
+    padding: 1px;
+}
+
+footer{
+    padding: 10px;
+    text-align: center;
+}
+
+span{
+    margin: 0px;
+    padding: 0px 0px 0px 1px;
+}
+
+.data, .result, .label{
+    border: solid 1px;
+    padding: 1px;
+    padding-left: 4px;
+    padding-right: 2px;
+}
+
+.data{
+    background-color: #a7f1a7
+}
+
+.result{
+    background-color: #a6d5ff;
+    pointer-events: none;
+}
+
+.box-container{
+    display: flex;
+    justify-content: center;
+    border: solid 2px;
+    margin: 0 auto 5 auto;
+}
+
+.box-settings{
+    display: grid;
+    justify-content: left;
+    grid-template-columns: minmax(9em, 9em) minmax(5em, 5em);
+    grid-column: 1 / -1;
+    margin: 2px;
+    padding: 2px;
+}
+
+.box-data, .box-result{
+    display: grid;
+    grid-column: 1 / -1;
+    padding: 2px;
+    margin: 2px;
+}
+
+.box-data{
+    grid-template-columns: minmax(3em, 3em) minmax(3.5em, 3.5em) minmax(3em, 3em) minmax(6.5em, 6.5em) minmax(3em, 3em);
+}
+
+.box-result{
+    grid-template-columns: minmax(6em, 6em) minmax(4em, 4em) minmax(3em, 3em) minmax(4em, 4em) minmax(3em, 3em);
+}
+
+.text-right{
+    text-align: right;
+    padding: 1px;
+    margin: 1px;
+}

@@ -1,0 +1,92 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformer Derating</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="author" content="Miguel Ángel Aguilar García">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <header>Transformer Derating</header>
+
+    <div class="box-settings" id="form0">
+        <label for="decimals">Decimals(results):</label>
+        <input type="number" min="0" max="2" step="1" value="2" name="decimals" id="decimals" class="data">
+    </div>
+
+    <div class="box-container">
+        <form id="form1">
+            <div class="box-data">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span style="font-size: small;">Liquid-immersed</span>
+                <span></span>
+            </div>
+
+            <div class="box-data">
+                <label for="size" class="text-right">Size</label>
+                <input type="number" min="0" value="45" step="1" name="size" id="size" class="data">
+                <span>[kVA]</span>
+                <select name="cooling" id="cooling" class="data">
+                    <option value="0">air-cooled</option>
+                    <option value="1">water-cooled</option>
+                    <option value="2">forced-air-cooled</option>
+                    <option value="3">forced-liquid-cooled with liquid-to-air cooled</option>
+                    <option value="4">forced-liquid-cooled with liquid-to-water cooled</option>
+                </select>
+                <label for="cooling" class="text-right">cooling</label>
+            </div>
+
+        </form>
+    </div>
+
+    <div class="box-container">
+        <form id="form2">
+            <div class="box-result">
+                <label for="altitud" class="text-right">Altitud</label>
+                <input type="number" min="1000" value="1000" step="100" name="altitud" id="altitud" class="data">
+                <span>[m]</span>
+                <input type="number" min="0" value="90" step="1" name="altitudDerating" id="altitudDerating" class="result">
+                <span>[%]</span>
+            </div>
+
+            <div class="box-result">
+                <label for="temperature" class="text-right">Temperature</label>
+                <input type="number" min="-30" max="50" value="30" step="5" name="temperature" id="temperature" class="data">
+                <span>[°C]</span>
+                <input type="number" min="0" value="90" step="1" name="temperatureDerating" id="temperatureDerating" class="result">
+                <span>[%]</span>
+            </div>
+        </form>
+    </div>
+
+    <div class="box-container">
+        <form id="form3">
+            <div class="box-result">
+                <label for="sizeDerating" class="text-right">Size derating</label>
+                <input type="number" min="0" value="40" step="1" name="sizeDerating" id="sizeDerating" class="result">
+                <span>[kVA]</span>
+                <input type="number" min="0" value="0.81" step="0.1" name="derating" id="derating" class="result">
+                <span>[%]</span>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+<footer>
+    <p class="text-center-footer">Based on IEEE Std C57.91-1995(R2002)</p>
+    <p class="text-center-footer">IEEE Guide for Loading Mineral-Oil-Immersed Transformers</p>
+    <br style="font-size: small;">
+    <p class="text-center-footer">Temperature: 6.4.Table 4 (Quick approximation), -30°C to 50°C</p>
+    <br style="font-size: small;">
+    <p class="text-center-footer">Altitud: Annex E.Table E.2, >1000m</p>
+    <br style="font-size: small;">
+    <p class="text-center-footer"><a href="https://github.com/MiguelAAguilarG" target="_blank">Código</a></p>
+    <p id="Miblog"><a href="https://miguelangelaguilargarcia.blogspot.com/2020/04/herramientas-para-calculos-electricos.html" target="_blank">Más herramientas (cálculos eléctricos)</a></p>
+    <p id="autor" > By Miguel Ángel Aguilar García</p>
+</footer>
+</html>
