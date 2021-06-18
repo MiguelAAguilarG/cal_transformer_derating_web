@@ -80,3 +80,10 @@ span{
     padding: 1px;
     margin: 1px;
 }
+
+.text-center-footer{
+    display: flex;
+    justify-content: center;
+    padding: 1px;
+    margin: 1px;
+}
